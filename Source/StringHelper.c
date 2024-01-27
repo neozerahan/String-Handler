@@ -83,6 +83,31 @@ void ClearBuffer()
 	}
 }
 
+//Compares two words and returns 0 = false or 1 = true...
+int CompareWords(const char * word01, const char * word02)
+{
+  int word01Length = CalculateWordLength(word01);
+  int word02Length = CalculateWordLength(word02);
+
+  if (word01Length != word02Length) return FALSE;
+  
+  int i = 0;
+
+  while( i <= word01Length)
+    {
+      //printf("word01[%c] = word02[%c]\n", word01[i], word02[i]);
+      if (word01[i] != word02[i]) 
+        { 
+           return FALSE;
+        }
+        else 
+            {
+               i++;
+            }    
+     }
+  return TRUE;
+}
+
 
 
 
