@@ -1,8 +1,8 @@
 Title: String Handler
 
-Description: This is more of a test project as I learn C programming language and also to get acquainted with Git + GitHub environment. I have created some of the functions found in the C's <String.h> library mainly; strcpy, strcat,strlen and strcmp. 
+Description: This is more of a test project as I learn C programming language and also get acquainted with Git + GitHub environment. I have created some of the functions found in the C's <String.h> library mainly; strcpy, strcat,strlen and strcmp. 
 
-How to run the project: Open the StringHandler.exe file in the ..\Bin folder.
+How to run the project: Open ..\Bin\StringHandler.exe
 
 ---
 

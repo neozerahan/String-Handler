@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "..\Header\StringHelper.h"
 
-
 int CalculateWordLength(const char * word)
 {
   int length = 0;
@@ -14,7 +13,6 @@ int CalculateWordLength(const char * word)
 
   return length; 
 }
-
 
 void CopyWord(char * word01, const char * word02)
 {
@@ -34,7 +32,6 @@ void CopyWord(char * word01, const char * word02)
 
   return;  
 }
-
 
 //concatenates two words and returns a char pointer...
 char * ConnectWords(const char * word01, const char * word02)
@@ -58,7 +55,6 @@ char * ConnectWords(const char * word01, const char * word02)
   
   //iterate through word02 and appends it in ConnectWord...
   int j = 0;
-  int totalStringLength = stringLength01 + stringLength02;
   while (j < stringLength02)
   {
     connectWord[j + stringLength01+1] = word02[j];
