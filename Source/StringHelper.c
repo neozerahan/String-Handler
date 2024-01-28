@@ -105,6 +105,79 @@ int CompareWords(const char * word01, const char * word02)
   return TRUE;
 }
 
+char * ConvertToUpperCase(const char * word)
+{
+  int isUpper = TRUE;
+  //Find length of the word...
+  int wordLength = CalculateWordLength(word);
+
+  //Assign memmory using malloc...
+  char * captilizedWord = malloc((wordLength + 1) * sizeof(char));
+
+  AssignLowerOrUpperCharCase(isUpper, captilizedWord, word, wordLength);
+  
+  return captilizedWord;
+}
+
+char * ConvertToLowerCase(const char * word)
+{
+  int convertToUpperCase = FALSE;
+  //Find length of the word...
+  int wordLength = CalculateWordLength(word);
+
+  //Assign memmory using malloc...
+  char * lowercaseWord = malloc((wordLength + 1) * sizeof(char));
+
+  AssignLowerOrUpperCharCase(convertToUpperCase, lowercaseWord, word, wordLength);
+  
+  return lowercaseWord;
+}
+
+void AssignLowerOrUpperCharCase(const int isConvertToUpperCase, char * wordToBeConverted, const char * word, const int wordLength)
+{
+  int i = 0;
+  int wordASCIValue = 0;
+  int asciiTableBase  = 0;
+  int asciiTableCeil  = 0;
+
+  //Check if convert case to upper or lower...
+  if (isConvertToUpperCase == TRUE)
+  {
+    asciiTableBase = LOWER_CASE_ASCI_TABLE_BASE;
+    asciiTableCeil = LOWER_CASE_ASCI_TABLE_CEIL;
+  } 
+  else 
+  {
+    asciiTableBase = UPPERCASE_ASCII_TABLE_BASE;
+    asciiTableCeil = UPPERCASE_ASCII_TABLE_CEIL;
+  } 
+
+  while ( i < wordLength)
+  {
+    //Check if the word needs to capitalized or lower-cased...
+    if (word[i] >= asciiTableBase && word[i] <= asciiTableCeil)
+    {
+      wordASCIValue = word[i];
+      if (isConvertToUpperCase == TRUE)
+      {
+        //Convert to upper-case by subtracting the ASCII value of the character...
+        wordToBeConverted[i] = wordASCIValue - CONVERT_TO_LOWER_CASE;
+      }
+      else
+      {
+        //Convert to lower-case by adding the ASCII value of the character...
+        wordToBeConverted[i] = wordASCIValue + CONVERT_TO_LOWER_CASE;
+      }
+    }
+     else
+     {
+      wordToBeConverted[i] = word[i];
+     }
+    i++;
+  }
+  wordToBeConverted[wordLength] = '\0';
+}
+
 
 
 
