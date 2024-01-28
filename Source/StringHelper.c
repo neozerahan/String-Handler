@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "..\Header\StringHelper.h"
+#include "..\Header\Constants.h"
 
 int CalculateWordLength(const char * word)
 {

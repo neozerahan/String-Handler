@@ -9,10 +9,10 @@ OBJS = Object\Main Object\StringHelper
 $(EXE): $(OBJS)
 	$(CC) $(CFLAG) $(OBJS) -o $@
 
-Object\StringHelper: Source\StringHelper.c Header\StringHelper.h
+Object\StringHelper: Source\StringHelper.c Header\StringHelper.h Header\Constants.h
 	$(CC) $(CFLAG) -c Source\StringHelper.c -o $@
 
-Object\Main: Source\Main.c Header\StringHelper.h
+Object\Main: Source\Main.c Header\StringHelper.h Header\Constants.h
 	$(CC) $(CFLAG) -c Source\Main.c -o $@
 
 clean:
