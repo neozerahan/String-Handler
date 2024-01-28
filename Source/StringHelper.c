@@ -3,7 +3,7 @@
 #include "..\Header\StringHelper.h"
 #include "..\Header\Constants.h"
 
-//Calculates the lenth of a word...
+//Calculate the lenth of a word...
 int CalculateWordLength(const char * word)
 {
   int length = 0;
@@ -36,7 +36,7 @@ void CopyWord(char * word01, const char * word02)
   return;  
 }
 
-//Concatenates two words and returns a char pointer...
+//Concatenate two words and returns a char pointer...
 char * ConnectWords(const char * word01, const char * word02)
 {
   int stringLength01 = CalculateWordLength(word01);
@@ -71,7 +71,7 @@ char * ConnectWords(const char * word01, const char * word02)
   
 }
 
-//Clears buffer by consuming them using getchar...
+//Clear buffer by consuming them using getchar...
 void ClearBuffer()
 {
 	char c;
@@ -82,7 +82,7 @@ void ClearBuffer()
 	}
 }
 
-//Compares two words and returns 0 = false or 1 = true...
+//Compare two words and returns 0 = false or 1 = true...
 int CompareWords(const char * word01, const char * word02)
 {
   int word01Length = CalculateWordLength(word01);
@@ -182,7 +182,3 @@ void AssignLowerOrUpperCharCase(const int isConvertToUpperCase, char * wordToBeC
   }
   wordToBeConverted[wordLength] = '\0';
 }
-
-
-
-
