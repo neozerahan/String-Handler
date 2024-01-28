@@ -143,8 +143,8 @@ void AssignLowerOrUpperCharCase(const int isConvertToUpperCase, char * wordToBeC
   //Check if convert case to upper or lower...
   if (isConvertToUpperCase == TRUE)
   {
-    asciiTableBase = LOWER_CASE_ASCI_TABLE_BASE;
-    asciiTableCeil = LOWER_CASE_ASCI_TABLE_CEIL;
+    asciiTableBase = LOWERCASE_ASCII_TABLE_BASE;
+    asciiTableCeil = LOWERCASE_ASCII_TABLE_CEIL;
   } 
   else 
   {
