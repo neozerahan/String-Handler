@@ -3,6 +3,7 @@
 #include "..\Header\StringHelper.h"
 #include "..\Header\Constants.h"
 
+//Calculates the lenth of a word...
 int CalculateWordLength(const char * word)
 {
   int length = 0;
@@ -15,6 +16,7 @@ int CalculateWordLength(const char * word)
   return length; 
 }
 
+//Copy Word02 -> Word01...
 void CopyWord(char * word01, const char * word02)
 {
   /*Calculates the length of word 02...*/
@@ -34,7 +36,7 @@ void CopyWord(char * word01, const char * word02)
   return;  
 }
 
-//concatenates two words and returns a char pointer...
+//Concatenates two words and returns a char pointer...
 char * ConnectWords(const char * word01, const char * word02)
 {
   int stringLength01 = CalculateWordLength(word01);
@@ -105,6 +107,7 @@ int CompareWords(const char * word01, const char * word02)
   return TRUE;
 }
 
+//Convert all letters in a word to upper-case...
 char * ConvertToUpperCase(const char * word)
 {
   int isUpper = TRUE;
@@ -119,6 +122,7 @@ char * ConvertToUpperCase(const char * word)
   return captilizedWord;
 }
 
+//Convert all letters in a word to lower-case...
 char * ConvertToLowerCase(const char * word)
 {
   int convertToUpperCase = FALSE;
@@ -133,6 +137,7 @@ char * ConvertToLowerCase(const char * word)
   return lowercaseWord;
 }
 
+/*Helper method that is used in ConvertToUpperCase & ConvertToLowerCase */
 void AssignLowerOrUpperCharCase(const int isConvertToUpperCase, char * wordToBeConverted, const char * word, const int wordLength)
 {
   int i = 0;
